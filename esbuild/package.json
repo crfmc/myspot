@@ -1,0 +1,24 @@
+{
+  "name": "esbuild",
+  "version": "1.0.0",
+  "description": "Boilerplate Javascript File with esbuild as the bundler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "sass src/styles/index.scss public/css/index.css",
+    "build": "esbuild src/index.js --outfile=public/js/index.js --bundle",
+    "dev": "concurrently \"sass --watch src/styles/index.scss public/css/index.css\" \"esbuild src/index.js --outfile=public/js/index.js --bundle --watch\""
+  },
+  "keywords": [
+    "esbuild",
+    "boilerplate",
+    "starter"
+  ],
+  "author": "Cesar Ferreyra-Mansilla",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.2.1",
+    "esbuild": "^0.14.43",
+    "sass": "^1.52.3"
+  }
+}
