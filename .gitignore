@@ -1,4 +1,5 @@
 node_modules
-esbuild/public
+esbuild/public/js
+esbuild/public/css
 
 .env
