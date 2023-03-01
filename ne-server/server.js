@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const open = require('open');
 
 // Instantiate express app
 const app = express();
