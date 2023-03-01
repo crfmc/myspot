@@ -1,0 +1,30 @@
+
+
+.tooling {
+    display: flex;
+    justify-content: space-evenly;
+
+    div {
+        background-color: lightgray;
+        opacity: 0.8;
+        border: 1px solid orange;
+        border-radius: 20px;
+        width: 30%;
+        padding: 20px 30px;
+
+        h2 {
+            font-family: 'verdana';
+        }
+        h3 {
+            font-family: 'verdana';
+        }
+        ul {
+            li {
+                span {
+                    font-family: 'arial'
+                }
+            }
+        }
+
+    }
+}
