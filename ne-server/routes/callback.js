@@ -16,13 +16,12 @@ module.exports = (req, res) => {
             const me = await spotifyApi.getMe();
             const userId = me.body.id;
             const { body } = await spotifyApi.getMyTopTracks()
-            console.log(body)
             return body.items.map(d => d.name)
         };
 
         getData()
         .then(data => {
-            res.send(data)
+            res.redirect('http://localhost:3000');
         });
 
 
