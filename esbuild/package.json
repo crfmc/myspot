@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "style": "sass src/styles/index.scss public/css/index.css",
     "build": "esbuild src/index.js --outfile=public/js/index.js --bundle",
-    "dev": "concurrently \"sass --watch src/styles/index.scss public/css/index.css\" \"esbuild src/index.js --outfile=public/js/index.js --bundle --watch\""
+    "dev": "concurrently \"sass --watch src/styles/index.scss public/css/index.css\" \"esbuild ./src --outfile=public/js/index.js --bundle --watch\""
   },
   "keywords": [
     "esbuild",
@@ -21,6 +21,7 @@
     "esbuild": "^0.14.43",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.52.3"
+    "sass": "^1.52.3",
+    "spotify-web-api-node": "^5.0.2"
   }
 }
