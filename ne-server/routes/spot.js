@@ -17,6 +17,8 @@ const scopes = [
     'user-top-read',
     'streaming'
 ];
+
+
 module.exports.api = spotifyApi;
 
 
@@ -38,6 +40,7 @@ module.exports.callback = (req, res) => {
         }
         
         spotifyApi.authorizationCodeGrant(code).then((data) => {
+            
             // Get access token and its expiration/refresh time from data.body
             const { access_token, refresh_token, expires_in } = data.body;
             
@@ -49,11 +52,6 @@ module.exports.callback = (req, res) => {
                 'refresh': refresh_token,
                 'expires': expires_in
             });
-
-            // setInterval( async () => {
-            //     const data = await spotifyApi.refreshAccessToken();
-            //     const access_token = data.body.access_token;
-            // }, expires_in / 2 * 1000);
 
 
         }).catch((error) => {
